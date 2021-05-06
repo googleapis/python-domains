@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 # Copyright 2020 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,6 +15,7 @@
 #
 
 from .services.domains import DomainsClient
+
 from .types.domains import AuthorizationCode
 from .types.domains import ConfigureContactSettingsRequest
 from .types.domains import ConfigureDnsSettingsRequest
@@ -43,7 +43,6 @@ from .types.domains import SearchDomainsRequest
 from .types.domains import SearchDomainsResponse
 from .types.domains import TransferLockState
 from .types.domains import UpdateRegistrationRequest
-
 
 __all__ = (
     "AuthorizationCode",

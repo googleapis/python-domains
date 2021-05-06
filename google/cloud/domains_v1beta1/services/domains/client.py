@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 # Copyright 2020 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
 from collections import OrderedDict
 from distutils import util
 import os
@@ -40,7 +38,6 @@ from google.protobuf import empty_pb2 as empty  # type: ignore
 from google.protobuf import field_mask_pb2 as field_mask  # type: ignore
 from google.protobuf import timestamp_pb2 as timestamp  # type: ignore
 from google.type import money_pb2 as money  # type: ignore
-
 from .transports.base import DomainsTransport, DEFAULT_CLIENT_INFO
 from .transports.grpc import DomainsGrpcTransport
 from .transports.grpc_asyncio import DomainsGrpcAsyncIOTransport
@@ -368,7 +365,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.SearchDomainsRequest):
-                The request object. Request for the `SearchDomains`
+                The request object.
+                Request for the `SearchDomains`
                 method.
             location (str):
                 Required. The location. Must be in the format
@@ -384,7 +382,6 @@ class DomainsClient(metaclass=DomainsClientMeta):
                 This corresponds to the ``query`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -411,10 +408,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
         # there are no flattened fields.
         if not isinstance(request, domains.SearchDomainsRequest):
             request = domains.SearchDomainsRequest(request)
-
             # If we have keyword arguments corresponding to fields on the
             # request, apply these.
-
             if location is not None:
                 request.location = location
             if query is not None:
@@ -452,7 +447,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.RetrieveRegisterParametersRequest):
-                The request object. Request for the
+                The request object.
+                Request for the
                 `RetrieveRegisterParameters` method.
             location (str):
                 Required. The location. Must be in the format
@@ -469,7 +465,6 @@ class DomainsClient(metaclass=DomainsClientMeta):
                 This corresponds to the ``domain_name`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -496,10 +491,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
         # there are no flattened fields.
         if not isinstance(request, domains.RetrieveRegisterParametersRequest):
             request = domains.RetrieveRegisterParametersRequest(request)
-
             # If we have keyword arguments corresponding to fields on the
             # request, apply these.
-
             if location is not None:
                 request.location = location
             if domain_name is not None:
@@ -551,7 +544,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.RegisterDomainRequest):
-                The request object. Request for the `RegisterDomain`
+                The request object.
+                Request for the `RegisterDomain`
                 method.
             parent (str):
                 Required. The parent resource of the ``Registration``.
@@ -577,7 +571,6 @@ class DomainsClient(metaclass=DomainsClientMeta):
                 This corresponds to the ``yearly_price`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -616,10 +609,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
         # there are no flattened fields.
         if not isinstance(request, domains.RegisterDomainRequest):
             request = domains.RegisterDomainRequest(request)
-
             # If we have keyword arguments corresponding to fields on the
             # request, apply these.
-
             if parent is not None:
                 request.parent = parent
             if registration is not None:
@@ -664,7 +655,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.ListRegistrationsRequest):
-                The request object. Request for the `ListRegistrations`
+                The request object.
+                Request for the `ListRegistrations`
                 method.
             parent (str):
                 Required. The project and location from which to list
@@ -674,7 +666,6 @@ class DomainsClient(metaclass=DomainsClientMeta):
                 This corresponds to the ``parent`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -705,10 +696,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
         # there are no flattened fields.
         if not isinstance(request, domains.ListRegistrationsRequest):
             request = domains.ListRegistrationsRequest(request)
-
             # If we have keyword arguments corresponding to fields on the
             # request, apply these.
-
             if parent is not None:
                 request.parent = parent
 
@@ -747,7 +736,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.GetRegistrationRequest):
-                The request object. Request for the `GetRegistration`
+                The request object.
+                Request for the `GetRegistration`
                 method.
             name (str):
                 Required. The name of the ``Registration`` to get, in
@@ -756,7 +746,6 @@ class DomainsClient(metaclass=DomainsClientMeta):
                 This corresponds to the ``name`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -793,10 +782,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
         # there are no flattened fields.
         if not isinstance(request, domains.GetRegistrationRequest):
             request = domains.GetRegistrationRequest(request)
-
             # If we have keyword arguments corresponding to fields on the
             # request, apply these.
-
             if name is not None:
                 request.name = name
 
@@ -838,7 +825,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.UpdateRegistrationRequest):
-                The request object. Request for the `UpdateRegistration`
+                The request object.
+                Request for the `UpdateRegistration`
                 method.
             registration (google.cloud.domains_v1beta1.types.Registration):
                 Fields of the ``Registration`` to update.
@@ -854,7 +842,6 @@ class DomainsClient(metaclass=DomainsClientMeta):
                 This corresponds to the ``update_mask`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -893,10 +880,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
         # there are no flattened fields.
         if not isinstance(request, domains.UpdateRegistrationRequest):
             request = domains.UpdateRegistrationRequest(request)
-
             # If we have keyword arguments corresponding to fields on the
             # request, apply these.
-
             if registration is not None:
                 request.registration = registration
             if update_mask is not None:
@@ -943,7 +928,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.ConfigureManagementSettingsRequest):
-                The request object. Request for the
+                The request object.
+                Request for the
                 `ConfigureManagementSettings` method.
             registration (str):
                 Required. The name of the ``Registration`` whose
@@ -967,7 +953,6 @@ class DomainsClient(metaclass=DomainsClientMeta):
                 This corresponds to the ``update_mask`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -1006,10 +991,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
         # there are no flattened fields.
         if not isinstance(request, domains.ConfigureManagementSettingsRequest):
             request = domains.ConfigureManagementSettingsRequest(request)
-
             # If we have keyword arguments corresponding to fields on the
             # request, apply these.
-
             if registration is not None:
                 request.registration = registration
             if management_settings is not None:
@@ -1060,7 +1043,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.ConfigureDnsSettingsRequest):
-                The request object. Request for the
+                The request object.
+                Request for the
                 `ConfigureDnsSettings` method.
             registration (str):
                 Required. The name of the ``Registration`` whose DNS
@@ -1091,7 +1075,6 @@ class DomainsClient(metaclass=DomainsClientMeta):
                 This corresponds to the ``update_mask`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -1130,10 +1113,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
         # there are no flattened fields.
         if not isinstance(request, domains.ConfigureDnsSettingsRequest):
             request = domains.ConfigureDnsSettingsRequest(request)
-
             # If we have keyword arguments corresponding to fields on the
             # request, apply these.
-
             if registration is not None:
                 request.registration = registration
             if dns_settings is not None:
@@ -1183,7 +1164,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.ConfigureContactSettingsRequest):
-                The request object. Request for the
+                The request object.
+                Request for the
                 `ConfigureContactSettings` method.
             registration (str):
                 Required. The name of the ``Registration`` whose contact
@@ -1207,7 +1189,6 @@ class DomainsClient(metaclass=DomainsClientMeta):
                 This corresponds to the ``update_mask`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -1246,10 +1227,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
         # there are no flattened fields.
         if not isinstance(request, domains.ConfigureContactSettingsRequest):
             request = domains.ConfigureContactSettingsRequest(request)
-
             # If we have keyword arguments corresponding to fields on the
             # request, apply these.
-
             if registration is not None:
                 request.registration = registration
             if contact_settings is not None:
@@ -1311,7 +1290,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.ExportRegistrationRequest):
-                The request object. Request for the `ExportRegistration`
+                The request object.
+                Request for the `ExportRegistration`
                 method.
             name (str):
                 Required. The name of the ``Registration`` to export, in
@@ -1320,7 +1300,6 @@ class DomainsClient(metaclass=DomainsClientMeta):
                 This corresponds to the ``name`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -1359,10 +1338,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
         # there are no flattened fields.
         if not isinstance(request, domains.ExportRegistrationRequest):
             request = domains.ExportRegistrationRequest(request)
-
             # If we have keyword arguments corresponding to fields on the
             # request, apply these.
-
             if name is not None:
                 request.name = name
 
@@ -1409,7 +1386,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.DeleteRegistrationRequest):
-                The request object. Request for the `DeleteRegistration`
+                The request object.
+                Request for the `DeleteRegistration`
                 method.
             name (str):
                 Required. The name of the ``Registration`` to delete, in
@@ -1418,7 +1396,6 @@ class DomainsClient(metaclass=DomainsClientMeta):
                 This corresponds to the ``name`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -1460,10 +1437,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
         # there are no flattened fields.
         if not isinstance(request, domains.DeleteRegistrationRequest):
             request = domains.DeleteRegistrationRequest(request)
-
             # If we have keyword arguments corresponding to fields on the
             # request, apply these.
-
             if name is not None:
                 request.name = name
 
@@ -1508,7 +1483,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.RetrieveAuthorizationCodeRequest):
-                The request object. Request for the
+                The request object.
+                Request for the
                 `RetrieveAuthorizationCode` method.
             registration (str):
                 Required. The name of the ``Registration`` whose
@@ -1518,7 +1494,6 @@ class DomainsClient(metaclass=DomainsClientMeta):
                 This corresponds to the ``registration`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -1545,10 +1520,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
         # there are no flattened fields.
         if not isinstance(request, domains.RetrieveAuthorizationCodeRequest):
             request = domains.RetrieveAuthorizationCodeRequest(request)
-
             # If we have keyword arguments corresponding to fields on the
             # request, apply these.
-
             if registration is not None:
                 request.registration = registration
 
@@ -1589,7 +1562,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.ResetAuthorizationCodeRequest):
-                The request object. Request for the
+                The request object.
+                Request for the
                 `ResetAuthorizationCode` method.
             registration (str):
                 Required. The name of the ``Registration`` whose
@@ -1599,7 +1573,6 @@ class DomainsClient(metaclass=DomainsClientMeta):
                 This corresponds to the ``registration`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -1626,10 +1599,8 @@ class DomainsClient(metaclass=DomainsClientMeta):
         # there are no flattened fields.
         if not isinstance(request, domains.ResetAuthorizationCodeRequest):
             request = domains.ResetAuthorizationCodeRequest(request)
-
             # If we have keyword arguments corresponding to fields on the
             # request, apply these.
-
             if registration is not None:
                 request.registration = registration
 

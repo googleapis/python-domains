@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 # Copyright 2020 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,9 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
 import warnings
-from typing import Callable, Dict, Optional, Sequence, Tuple
+from typing import Callable, Dict, Optional, Sequence, Tuple, Union
 
 from google.api_core import grpc_helpers  # type: ignore
 from google.api_core import operations_v1  # type: ignore
@@ -29,7 +27,6 @@ import grpc  # type: ignore
 
 from google.cloud.domains_v1beta1.types import domains
 from google.longrunning import operations_pb2 as operations  # type: ignore
-
 from .base import DomainsTransport, DEFAULT_CLIENT_INFO
 
 
@@ -67,7 +64,8 @@ class DomainsGrpcTransport(DomainsTransport):
         """Instantiate the transport.
 
         Args:
-            host (Optional[str]): The hostname to connect to.
+            host (Optional[str]):
+                 The hostname to connect to.
             credentials (Optional[google.auth.credentials.Credentials]): The
                 authorization credentials to attach to requests. These
                 credentials identify the application to the service; if none
@@ -209,13 +207,15 @@ class DomainsGrpcTransport(DomainsTransport):
             google.api_core.exceptions.DuplicateCredentialArgs: If both ``credentials``
               and ``credentials_file`` are passed.
         """
-        scopes = scopes or cls.AUTH_SCOPES
+
+        self_signed_jwt_kwargs = cls._get_self_signed_jwt_kwargs(host, scopes)
+
         return grpc_helpers.create_channel(
             host,
             credentials=credentials,
             credentials_file=credentials_file,
-            scopes=scopes,
             quota_project_id=quota_project_id,
+            **self_signed_jwt_kwargs,
             **kwargs,
         )
 
@@ -243,7 +243,9 @@ class DomainsGrpcTransport(DomainsTransport):
     def search_domains(
         self,
     ) -> Callable[[domains.SearchDomainsRequest], domains.SearchDomainsResponse]:
-        r"""Return a callable for the search domains method over gRPC.
+        r"""Return a callable for the
+        search domains
+          method over gRPC.
 
         Searches for available domain names similar to the provided
         query.
@@ -277,7 +279,9 @@ class DomainsGrpcTransport(DomainsTransport):
         [domains.RetrieveRegisterParametersRequest],
         domains.RetrieveRegisterParametersResponse,
     ]:
-        r"""Return a callable for the retrieve register parameters method over gRPC.
+        r"""Return a callable for the
+        retrieve register parameters
+          method over gRPC.
 
         Gets parameters needed to register a new domain name, including
         price and up-to-date availability. Use the returned values to
@@ -305,7 +309,9 @@ class DomainsGrpcTransport(DomainsTransport):
     def register_domain(
         self,
     ) -> Callable[[domains.RegisterDomainRequest], operations.Operation]:
-        r"""Return a callable for the register domain method over gRPC.
+        r"""Return a callable for the
+        register domain
+          method over gRPC.
 
         Registers a new domain name and creates a corresponding
         ``Registration`` resource.
@@ -346,7 +352,9 @@ class DomainsGrpcTransport(DomainsTransport):
     ) -> Callable[
         [domains.ListRegistrationsRequest], domains.ListRegistrationsResponse
     ]:
-        r"""Return a callable for the list registrations method over gRPC.
+        r"""Return a callable for the
+        list registrations
+          method over gRPC.
 
         Lists the ``Registration`` resources in a project.
 
@@ -372,7 +380,9 @@ class DomainsGrpcTransport(DomainsTransport):
     def get_registration(
         self,
     ) -> Callable[[domains.GetRegistrationRequest], domains.Registration]:
-        r"""Return a callable for the get registration method over gRPC.
+        r"""Return a callable for the
+        get registration
+          method over gRPC.
 
         Gets the details of a ``Registration`` resource.
 
@@ -398,7 +408,9 @@ class DomainsGrpcTransport(DomainsTransport):
     def update_registration(
         self,
     ) -> Callable[[domains.UpdateRegistrationRequest], operations.Operation]:
-        r"""Return a callable for the update registration method over gRPC.
+        r"""Return a callable for the
+        update registration
+          method over gRPC.
 
         Updates select fields of a ``Registration`` resource, notably
         ``labels``. To update other fields, use the appropriate custom
@@ -432,7 +444,9 @@ class DomainsGrpcTransport(DomainsTransport):
     def configure_management_settings(
         self,
     ) -> Callable[[domains.ConfigureManagementSettingsRequest], operations.Operation]:
-        r"""Return a callable for the configure management settings method over gRPC.
+        r"""Return a callable for the
+        configure management settings
+          method over gRPC.
 
         Updates a ``Registration``'s management settings.
 
@@ -460,7 +474,9 @@ class DomainsGrpcTransport(DomainsTransport):
     def configure_dns_settings(
         self,
     ) -> Callable[[domains.ConfigureDnsSettingsRequest], operations.Operation]:
-        r"""Return a callable for the configure dns settings method over gRPC.
+        r"""Return a callable for the
+        configure dns settings
+          method over gRPC.
 
         Updates a ``Registration``'s DNS settings.
 
@@ -486,7 +502,9 @@ class DomainsGrpcTransport(DomainsTransport):
     def configure_contact_settings(
         self,
     ) -> Callable[[domains.ConfigureContactSettingsRequest], operations.Operation]:
-        r"""Return a callable for the configure contact settings method over gRPC.
+        r"""Return a callable for the
+        configure contact settings
+          method over gRPC.
 
         Updates a ``Registration``'s contact settings. Some changes
         require confirmation by the domain's registrant contact .
@@ -513,7 +531,9 @@ class DomainsGrpcTransport(DomainsTransport):
     def export_registration(
         self,
     ) -> Callable[[domains.ExportRegistrationRequest], operations.Operation]:
-        r"""Return a callable for the export registration method over gRPC.
+        r"""Return a callable for the
+        export registration
+          method over gRPC.
 
         Exports a ``Registration`` that you no longer want to use with
         Cloud Domains. You can continue to use the domain in `Google
@@ -552,7 +572,9 @@ class DomainsGrpcTransport(DomainsTransport):
     def delete_registration(
         self,
     ) -> Callable[[domains.DeleteRegistrationRequest], operations.Operation]:
-        r"""Return a callable for the delete registration method over gRPC.
+        r"""Return a callable for the
+        delete registration
+          method over gRPC.
 
         Deletes a ``Registration`` resource.
 
@@ -586,7 +608,9 @@ class DomainsGrpcTransport(DomainsTransport):
     ) -> Callable[
         [domains.RetrieveAuthorizationCodeRequest], domains.AuthorizationCode
     ]:
-        r"""Return a callable for the retrieve authorization code method over gRPC.
+        r"""Return a callable for the
+        retrieve authorization code
+          method over gRPC.
 
         Gets the authorization code of the ``Registration`` for the
         purpose of transferring the domain to another registrar.
@@ -616,7 +640,9 @@ class DomainsGrpcTransport(DomainsTransport):
     def reset_authorization_code(
         self,
     ) -> Callable[[domains.ResetAuthorizationCodeRequest], domains.AuthorizationCode]:
-        r"""Return a callable for the reset authorization code method over gRPC.
+        r"""Return a callable for the
+        reset authorization code
+          method over gRPC.
 
         Resets the authorization code of the ``Registration`` to a new
         random string.

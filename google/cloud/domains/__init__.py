@@ -14,20 +14,22 @@
 # limitations under the License.
 #
 
-from google.cloud.domains_v1beta1.services.domains.client import DomainsClient
 from google.cloud.domains_v1beta1.services.domains.async_client import (
     DomainsAsyncClient,
 )
-
+from google.cloud.domains_v1beta1.services.domains.client import DomainsClient
 from google.cloud.domains_v1beta1.types.domains import AuthorizationCode
 from google.cloud.domains_v1beta1.types.domains import ConfigureContactSettingsRequest
 from google.cloud.domains_v1beta1.types.domains import ConfigureDnsSettingsRequest
 from google.cloud.domains_v1beta1.types.domains import (
     ConfigureManagementSettingsRequest,
 )
+from google.cloud.domains_v1beta1.types.domains import ContactNotice
+from google.cloud.domains_v1beta1.types.domains import ContactPrivacy
 from google.cloud.domains_v1beta1.types.domains import ContactSettings
 from google.cloud.domains_v1beta1.types.domains import DeleteRegistrationRequest
 from google.cloud.domains_v1beta1.types.domains import DnsSettings
+from google.cloud.domains_v1beta1.types.domains import DomainNotice
 from google.cloud.domains_v1beta1.types.domains import ExportRegistrationRequest
 from google.cloud.domains_v1beta1.types.domains import GetRegistrationRequest
 from google.cloud.domains_v1beta1.types.domains import ListRegistrationsRequest
@@ -45,22 +47,22 @@ from google.cloud.domains_v1beta1.types.domains import (
 )
 from google.cloud.domains_v1beta1.types.domains import SearchDomainsRequest
 from google.cloud.domains_v1beta1.types.domains import SearchDomainsResponse
-from google.cloud.domains_v1beta1.types.domains import UpdateRegistrationRequest
-from google.cloud.domains_v1beta1.types.domains import ContactNotice
-from google.cloud.domains_v1beta1.types.domains import ContactPrivacy
-from google.cloud.domains_v1beta1.types.domains import DomainNotice
 from google.cloud.domains_v1beta1.types.domains import TransferLockState
+from google.cloud.domains_v1beta1.types.domains import UpdateRegistrationRequest
 
 __all__ = (
-    "DomainsClient",
-    "DomainsAsyncClient",
     "AuthorizationCode",
     "ConfigureContactSettingsRequest",
     "ConfigureDnsSettingsRequest",
     "ConfigureManagementSettingsRequest",
+    "ContactNotice",
+    "ContactPrivacy",
     "ContactSettings",
     "DeleteRegistrationRequest",
     "DnsSettings",
+    "DomainNotice",
+    "DomainsAsyncClient",
+    "DomainsClient",
     "ExportRegistrationRequest",
     "GetRegistrationRequest",
     "ListRegistrationsRequest",
@@ -76,9 +78,6 @@ __all__ = (
     "RetrieveRegisterParametersResponse",
     "SearchDomainsRequest",
     "SearchDomainsResponse",
-    "UpdateRegistrationRequest",
-    "ContactNotice",
-    "ContactPrivacy",
-    "DomainNotice",
     "TransferLockState",
+    "UpdateRegistrationRequest",
 )

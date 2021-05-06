@@ -175,7 +175,7 @@ class Registration(proto.Message):
     expire_time = proto.Field(proto.MESSAGE, number=6, message=timestamp.Timestamp,)
     state = proto.Field(proto.ENUM, number=7, enum=State,)
     issues = proto.RepeatedField(proto.ENUM, number=8, enum=Issue,)
-    labels = proto.MapField(proto.STRING, proto.STRING, number=9)
+    labels = proto.MapField(proto.STRING, proto.STRING, number=9,)
     management_settings = proto.Field(
         proto.MESSAGE, number=10, message="ManagementSettings",
     )

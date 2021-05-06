@@ -365,8 +365,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.SearchDomainsRequest):
-                The request object.
-                Request for the `SearchDomains`
+                The request object. Request for the `SearchDomains`
                 method.
             location (str):
                 Required. The location. Must be in the format
@@ -447,8 +446,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.RetrieveRegisterParametersRequest):
-                The request object.
-                Request for the
+                The request object. Request for the
                 `RetrieveRegisterParameters` method.
             location (str):
                 Required. The location. Must be in the format
@@ -544,8 +542,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.RegisterDomainRequest):
-                The request object.
-                Request for the `RegisterDomain`
+                The request object. Request for the `RegisterDomain`
                 method.
             parent (str):
                 Required. The parent resource of the ``Registration``.
@@ -655,8 +652,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.ListRegistrationsRequest):
-                The request object.
-                Request for the `ListRegistrations`
+                The request object. Request for the `ListRegistrations`
                 method.
             parent (str):
                 Required. The project and location from which to list
@@ -736,8 +732,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.GetRegistrationRequest):
-                The request object.
-                Request for the `GetRegistration`
+                The request object. Request for the `GetRegistration`
                 method.
             name (str):
                 Required. The name of the ``Registration`` to get, in
@@ -825,8 +820,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.UpdateRegistrationRequest):
-                The request object.
-                Request for the `UpdateRegistration`
+                The request object. Request for the `UpdateRegistration`
                 method.
             registration (google.cloud.domains_v1beta1.types.Registration):
                 Fields of the ``Registration`` to update.
@@ -928,8 +922,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.ConfigureManagementSettingsRequest):
-                The request object.
-                Request for the
+                The request object. Request for the
                 `ConfigureManagementSettings` method.
             registration (str):
                 Required. The name of the ``Registration`` whose
@@ -1043,8 +1036,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.ConfigureDnsSettingsRequest):
-                The request object.
-                Request for the
+                The request object. Request for the
                 `ConfigureDnsSettings` method.
             registration (str):
                 Required. The name of the ``Registration`` whose DNS
@@ -1164,8 +1156,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.ConfigureContactSettingsRequest):
-                The request object.
-                Request for the
+                The request object. Request for the
                 `ConfigureContactSettings` method.
             registration (str):
                 Required. The name of the ``Registration`` whose contact
@@ -1290,8 +1281,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.ExportRegistrationRequest):
-                The request object.
-                Request for the `ExportRegistration`
+                The request object. Request for the `ExportRegistration`
                 method.
             name (str):
                 Required. The name of the ``Registration`` to export, in
@@ -1386,8 +1376,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.DeleteRegistrationRequest):
-                The request object.
-                Request for the `DeleteRegistration`
+                The request object. Request for the `DeleteRegistration`
                 method.
             name (str):
                 Required. The name of the ``Registration`` to delete, in
@@ -1483,8 +1472,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.RetrieveAuthorizationCodeRequest):
-                The request object.
-                Request for the
+                The request object. Request for the
                 `RetrieveAuthorizationCode` method.
             registration (str):
                 Required. The name of the ``Registration`` whose
@@ -1562,8 +1550,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         Args:
             request (google.cloud.domains_v1beta1.types.ResetAuthorizationCodeRequest):
-                The request object.
-                Request for the
+                The request object. Request for the
                 `ResetAuthorizationCode` method.
             registration (str):
                 Required. The name of the ``Registration`` whose

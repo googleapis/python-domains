@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 # Copyright 2020 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,6 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
 from collections import OrderedDict
 import functools
 import re
@@ -34,6 +36,7 @@ from google.protobuf import empty_pb2 as empty  # type: ignore
 from google.protobuf import field_mask_pb2 as field_mask  # type: ignore
 from google.protobuf import timestamp_pb2 as timestamp  # type: ignore
 from google.type import money_pb2 as money  # type: ignore
+
 from .transports.base import DomainsTransport, DEFAULT_CLIENT_INFO
 from .transports.grpc_asyncio import DomainsGrpcAsyncIOTransport
 from .client import DomainsClient
@@ -51,20 +54,25 @@ class DomainsAsyncClient:
 
     registration_path = staticmethod(DomainsClient.registration_path)
     parse_registration_path = staticmethod(DomainsClient.parse_registration_path)
+
     common_billing_account_path = staticmethod(
         DomainsClient.common_billing_account_path
     )
     parse_common_billing_account_path = staticmethod(
         DomainsClient.parse_common_billing_account_path
     )
+
     common_folder_path = staticmethod(DomainsClient.common_folder_path)
     parse_common_folder_path = staticmethod(DomainsClient.parse_common_folder_path)
+
     common_organization_path = staticmethod(DomainsClient.common_organization_path)
     parse_common_organization_path = staticmethod(
         DomainsClient.parse_common_organization_path
     )
+
     common_project_path = staticmethod(DomainsClient.common_project_path)
     parse_common_project_path = staticmethod(DomainsClient.parse_common_project_path)
+
     common_location_path = staticmethod(DomainsClient.common_location_path)
     parse_common_location_path = staticmethod(DomainsClient.parse_common_location_path)
 
@@ -153,6 +161,7 @@ class DomainsAsyncClient:
             google.auth.exceptions.MutualTlsChannelError: If mutual TLS transport
                 creation failed for any reason.
         """
+
         self._client = DomainsClient(
             credentials=credentials,
             transport=transport,
@@ -179,8 +188,7 @@ class DomainsAsyncClient:
 
         Args:
             request (:class:`google.cloud.domains_v1beta1.types.SearchDomainsRequest`):
-                The request object.
-                Request for the `SearchDomains`
+                The request object. Request for the `SearchDomains`
                 method.
             location (:class:`str`):
                 Required. The location. Must be in the format
@@ -196,6 +204,7 @@ class DomainsAsyncClient:
                 This corresponds to the ``query`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
+
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -220,6 +229,7 @@ class DomainsAsyncClient:
 
         # If we have keyword arguments corresponding to fields on the
         # request, apply these.
+
         if location is not None:
             request.location = location
         if query is not None:
@@ -261,8 +271,7 @@ class DomainsAsyncClient:
 
         Args:
             request (:class:`google.cloud.domains_v1beta1.types.RetrieveRegisterParametersRequest`):
-                The request object.
-                Request for the
+                The request object. Request for the
                 `RetrieveRegisterParameters` method.
             location (:class:`str`):
                 Required. The location. Must be in the format
@@ -279,6 +288,7 @@ class DomainsAsyncClient:
                 This corresponds to the ``domain_name`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
+
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -303,6 +313,7 @@ class DomainsAsyncClient:
 
         # If we have keyword arguments corresponding to fields on the
         # request, apply these.
+
         if location is not None:
             request.location = location
         if domain_name is not None:
@@ -356,8 +367,7 @@ class DomainsAsyncClient:
 
         Args:
             request (:class:`google.cloud.domains_v1beta1.types.RegisterDomainRequest`):
-                The request object.
-                Request for the `RegisterDomain`
+                The request object. Request for the `RegisterDomain`
                 method.
             parent (:class:`str`):
                 Required. The parent resource of the ``Registration``.
@@ -383,6 +393,7 @@ class DomainsAsyncClient:
                 This corresponds to the ``yearly_price`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
+
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -419,6 +430,7 @@ class DomainsAsyncClient:
 
         # If we have keyword arguments corresponding to fields on the
         # request, apply these.
+
         if parent is not None:
             request.parent = parent
         if registration is not None:
@@ -467,8 +479,7 @@ class DomainsAsyncClient:
 
         Args:
             request (:class:`google.cloud.domains_v1beta1.types.ListRegistrationsRequest`):
-                The request object.
-                Request for the `ListRegistrations`
+                The request object. Request for the `ListRegistrations`
                 method.
             parent (:class:`str`):
                 Required. The project and location from which to list
@@ -478,6 +489,7 @@ class DomainsAsyncClient:
                 This corresponds to the ``parent`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
+
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -506,6 +518,7 @@ class DomainsAsyncClient:
 
         # If we have keyword arguments corresponding to fields on the
         # request, apply these.
+
         if parent is not None:
             request.parent = parent
 
@@ -548,8 +561,7 @@ class DomainsAsyncClient:
 
         Args:
             request (:class:`google.cloud.domains_v1beta1.types.GetRegistrationRequest`):
-                The request object.
-                Request for the `GetRegistration`
+                The request object. Request for the `GetRegistration`
                 method.
             name (:class:`str`):
                 Required. The name of the ``Registration`` to get, in
@@ -558,6 +570,7 @@ class DomainsAsyncClient:
                 This corresponds to the ``name`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
+
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -592,6 +605,7 @@ class DomainsAsyncClient:
 
         # If we have keyword arguments corresponding to fields on the
         # request, apply these.
+
         if name is not None:
             request.name = name
 
@@ -637,8 +651,7 @@ class DomainsAsyncClient:
 
         Args:
             request (:class:`google.cloud.domains_v1beta1.types.UpdateRegistrationRequest`):
-                The request object.
-                Request for the `UpdateRegistration`
+                The request object. Request for the `UpdateRegistration`
                 method.
             registration (:class:`google.cloud.domains_v1beta1.types.Registration`):
                 Fields of the ``Registration`` to update.
@@ -654,6 +667,7 @@ class DomainsAsyncClient:
                 This corresponds to the ``update_mask`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
+
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -690,6 +704,7 @@ class DomainsAsyncClient:
 
         # If we have keyword arguments corresponding to fields on the
         # request, apply these.
+
         if registration is not None:
             request.registration = registration
         if update_mask is not None:
@@ -740,8 +755,7 @@ class DomainsAsyncClient:
 
         Args:
             request (:class:`google.cloud.domains_v1beta1.types.ConfigureManagementSettingsRequest`):
-                The request object.
-                Request for the
+                The request object. Request for the
                 `ConfigureManagementSettings` method.
             registration (:class:`str`):
                 Required. The name of the ``Registration`` whose
@@ -765,6 +779,7 @@ class DomainsAsyncClient:
                 This corresponds to the ``update_mask`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
+
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -801,6 +816,7 @@ class DomainsAsyncClient:
 
         # If we have keyword arguments corresponding to fields on the
         # request, apply these.
+
         if registration is not None:
             request.registration = registration
         if management_settings is not None:
@@ -853,8 +869,7 @@ class DomainsAsyncClient:
 
         Args:
             request (:class:`google.cloud.domains_v1beta1.types.ConfigureDnsSettingsRequest`):
-                The request object.
-                Request for the
+                The request object. Request for the
                 `ConfigureDnsSettings` method.
             registration (:class:`str`):
                 Required. The name of the ``Registration`` whose DNS
@@ -885,6 +900,7 @@ class DomainsAsyncClient:
                 This corresponds to the ``update_mask`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
+
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -921,6 +937,7 @@ class DomainsAsyncClient:
 
         # If we have keyword arguments corresponding to fields on the
         # request, apply these.
+
         if registration is not None:
             request.registration = registration
         if dns_settings is not None:
@@ -974,8 +991,7 @@ class DomainsAsyncClient:
 
         Args:
             request (:class:`google.cloud.domains_v1beta1.types.ConfigureContactSettingsRequest`):
-                The request object.
-                Request for the
+                The request object. Request for the
                 `ConfigureContactSettings` method.
             registration (:class:`str`):
                 Required. The name of the ``Registration`` whose contact
@@ -999,6 +1015,7 @@ class DomainsAsyncClient:
                 This corresponds to the ``update_mask`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
+
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -1035,6 +1052,7 @@ class DomainsAsyncClient:
 
         # If we have keyword arguments corresponding to fields on the
         # request, apply these.
+
         if registration is not None:
             request.registration = registration
         if contact_settings is not None:
@@ -1098,8 +1116,7 @@ class DomainsAsyncClient:
 
         Args:
             request (:class:`google.cloud.domains_v1beta1.types.ExportRegistrationRequest`):
-                The request object.
-                Request for the `ExportRegistration`
+                The request object. Request for the `ExportRegistration`
                 method.
             name (:class:`str`):
                 Required. The name of the ``Registration`` to export, in
@@ -1108,6 +1125,7 @@ class DomainsAsyncClient:
                 This corresponds to the ``name`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
+
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -1144,6 +1162,7 @@ class DomainsAsyncClient:
 
         # If we have keyword arguments corresponding to fields on the
         # request, apply these.
+
         if name is not None:
             request.name = name
 
@@ -1194,8 +1213,7 @@ class DomainsAsyncClient:
 
         Args:
             request (:class:`google.cloud.domains_v1beta1.types.DeleteRegistrationRequest`):
-                The request object.
-                Request for the `DeleteRegistration`
+                The request object. Request for the `DeleteRegistration`
                 method.
             name (:class:`str`):
                 Required. The name of the ``Registration`` to delete, in
@@ -1204,6 +1222,7 @@ class DomainsAsyncClient:
                 This corresponds to the ``name`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
+
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -1243,6 +1262,7 @@ class DomainsAsyncClient:
 
         # If we have keyword arguments corresponding to fields on the
         # request, apply these.
+
         if name is not None:
             request.name = name
 
@@ -1291,8 +1311,7 @@ class DomainsAsyncClient:
 
         Args:
             request (:class:`google.cloud.domains_v1beta1.types.RetrieveAuthorizationCodeRequest`):
-                The request object.
-                Request for the
+                The request object. Request for the
                 `RetrieveAuthorizationCode` method.
             registration (:class:`str`):
                 Required. The name of the ``Registration`` whose
@@ -1302,6 +1321,7 @@ class DomainsAsyncClient:
                 This corresponds to the ``registration`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
+
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -1326,6 +1346,7 @@ class DomainsAsyncClient:
 
         # If we have keyword arguments corresponding to fields on the
         # request, apply these.
+
         if registration is not None:
             request.registration = registration
 
@@ -1368,8 +1389,7 @@ class DomainsAsyncClient:
 
         Args:
             request (:class:`google.cloud.domains_v1beta1.types.ResetAuthorizationCodeRequest`):
-                The request object.
-                Request for the
+                The request object. Request for the
                 `ResetAuthorizationCode` method.
             registration (:class:`str`):
                 Required. The name of the ``Registration`` whose
@@ -1379,6 +1399,7 @@ class DomainsAsyncClient:
                 This corresponds to the ``registration`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
+
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -1403,6 +1424,7 @@ class DomainsAsyncClient:
 
         # If we have keyword arguments corresponding to fields on the
         # request, apply these.
+
         if registration is not None:
             request.registration = registration
 

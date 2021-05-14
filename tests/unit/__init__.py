@@ -13,21 +13,3 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-from collections import OrderedDict
-from typing import Dict, Type
-
-from .base import DomainsTransport
-from .grpc import DomainsGrpcTransport
-from .grpc_asyncio import DomainsGrpcAsyncIOTransport
-
-
-# Compile a registry of transports.
-_transport_registry = OrderedDict()  # type: Dict[str, Type[DomainsTransport]]
-_transport_registry['grpc'] = DomainsGrpcTransport
-_transport_registry['grpc_asyncio'] = DomainsGrpcAsyncIOTransport
-
-__all__ = (
-    'DomainsTransport',
-    'DomainsGrpcTransport',
-    'DomainsGrpcAsyncIOTransport',
-)

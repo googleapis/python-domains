@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.2.1](https://www.github.com/googleapis/python-domains/compare/v0.2.0...v0.2.1) (2021-07-20)
+
+
+### Bug Fixes
+
+* **deps:** pin 'google-{api,cloud}-core', 'google-auth' to allow 2.x versions ([#42](https://www.github.com/googleapis/python-domains/issues/42)) ([8c7a8cc](https://www.github.com/googleapis/python-domains/commit/8c7a8cc2923e6bf2cec6d6447ade420632d3c95a))
+
 ## [0.2.0](https://www.github.com/googleapis/python-domains/compare/v0.1.0...v0.2.0) (2021-07-01)
 
 

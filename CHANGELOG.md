@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0](https://www.github.com/googleapis/python-domains/compare/v0.2.0...v0.3.0) (2021-07-24)
+
+
+### Features
+
+* add Samples section to CONTRIBUTING.rst ([#43](https://www.github.com/googleapis/python-domains/issues/43)) ([2718d3b](https://www.github.com/googleapis/python-domains/commit/2718d3bbe90b019ed21437f16eafd036752beaf3))
+
+
+### Bug Fixes
+
+* **deps:** pin 'google-{api,cloud}-core', 'google-auth' to allow 2.x versions ([#42](https://www.github.com/googleapis/python-domains/issues/42)) ([8c7a8cc](https://www.github.com/googleapis/python-domains/commit/8c7a8cc2923e6bf2cec6d6447ade420632d3c95a))
+* enable self signed jwt for grpc ([#47](https://www.github.com/googleapis/python-domains/issues/47)) ([d4b8730](https://www.github.com/googleapis/python-domains/commit/d4b873068ca3d0f7fadc01beee2ddfcd4f4b381a))
+
 ## [0.2.0](https://www.github.com/googleapis/python-domains/compare/v0.1.0...v0.2.0) (2021-07-01)
 
 

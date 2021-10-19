@@ -65,9 +65,19 @@
                 "retrieve_register_parameters"
               ]
             },
+            "RetrieveTransferParameters": {
+              "methods": [
+                "retrieve_transfer_parameters"
+              ]
+            },
             "SearchDomains": {
               "methods": [
                 "search_domains"
+              ]
+            },
+            "TransferDomain": {
+              "methods": [
+                "transfer_domain"
               ]
             },
             "UpdateRegistration": {
@@ -135,9 +145,19 @@
                 "retrieve_register_parameters"
               ]
             },
+            "RetrieveTransferParameters": {
+              "methods": [
+                "retrieve_transfer_parameters"
+              ]
+            },
             "SearchDomains": {
               "methods": [
                 "search_domains"
+              ]
+            },
+            "TransferDomain": {
+              "methods": [
+                "transfer_domain"
               ]
             },
             "UpdateRegistration": {

@@ -50,7 +50,9 @@ class domainsCallTransformer(cst.CSTTransformer):
         'reset_authorization_code': ('registration', ),
         'retrieve_authorization_code': ('registration', ),
         'retrieve_register_parameters': ('domain_name', 'location', ),
+        'retrieve_transfer_parameters': ('domain_name', 'location', ),
         'search_domains': ('query', 'location', ),
+        'transfer_domain': ('parent', 'registration', 'yearly_price', 'contact_notices', 'authorization_code', 'validate_only', ),
         'update_registration': ('update_mask', 'registration', ),
     }
 

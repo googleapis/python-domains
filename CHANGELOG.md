@@ -1,5 +1,32 @@
 # Changelog
 
+### [0.4.1](https://www.github.com/googleapis/python-domains/compare/v0.4.0...v0.4.1) (2021-11-01)
+
+
+### Bug Fixes
+
+* **deps:** drop packaging dependency ([2375457](https://www.github.com/googleapis/python-domains/commit/2375457fc8772914f8689bdcfd132c15fb504d84))
+* **deps:** require google-api-core >= 1.28.0 ([2375457](https://www.github.com/googleapis/python-domains/commit/2375457fc8772914f8689bdcfd132c15fb504d84))
+
+
+### Documentation
+
+* list oneofs in docstring ([2375457](https://www.github.com/googleapis/python-domains/commit/2375457fc8772914f8689bdcfd132c15fb504d84))
+
+## [0.4.0](https://www.github.com/googleapis/python-domains/compare/v0.3.0...v0.4.0) (2021-10-21)
+
+
+### Features
+
+* add support for python 3.10 ([#74](https://www.github.com/googleapis/python-domains/issues/74)) ([320b3a0](https://www.github.com/googleapis/python-domains/commit/320b3a0ecc2ebb8ff1d1414a18d5d9f39dda1ae3))
+* add v1 API, plus v1b1 methods for domain transfers ([#77](https://www.github.com/googleapis/python-domains/issues/77)) ([47434a1](https://www.github.com/googleapis/python-domains/commit/47434a15ae6205681209e668ddc358d325ac5f24))
+* set v1 as the default import ([#79](https://www.github.com/googleapis/python-domains/issues/79)) ([4e2691e](https://www.github.com/googleapis/python-domains/commit/4e2691ee781d59c73fd9cb97b39dd59caac34329))
+
+
+### Bug Fixes
+
+* **deps:** require proto-plus 1.15.0 ([#81](https://www.github.com/googleapis/python-domains/issues/81)) ([1c72855](https://www.github.com/googleapis/python-domains/commit/1c72855510a51870342e2c3f039571283b7a4534))
+
 ## [0.3.0](https://www.github.com/googleapis/python-domains/compare/v0.2.3...v0.3.0) (2021-10-08)
 
 

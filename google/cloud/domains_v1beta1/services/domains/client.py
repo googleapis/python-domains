@@ -16,7 +16,7 @@
 from collections import OrderedDict
 import os
 import re
-from typing import Dict, Optional, Sequence, Tuple, Type, Union
+from typing import Dict, Mapping, Optional, Sequence, Tuple, Type, Union
 import pkg_resources
 
 from google.api_core import client_options as client_options_lib
@@ -452,7 +452,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import domains_v1beta1
+                    from google.cloud import domains_v1beta1
 
             def sample_search_domains():
                 # Create a client
@@ -559,7 +559,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import domains_v1beta1
+                    from google.cloud import domains_v1beta1
 
             def sample_retrieve_register_parameters():
                 # Create a client
@@ -681,7 +681,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import domains_v1beta1
+                    from google.cloud import domains_v1beta1
 
             def sample_register_domain():
                 # Create a client
@@ -848,7 +848,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import domains_v1beta1
+                    from google.cloud import domains_v1beta1
 
             def sample_retrieve_transfer_parameters():
                 # Create a client
@@ -981,7 +981,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import domains_v1beta1
+                    from google.cloud import domains_v1beta1
 
             def sample_transfer_domain():
                 # Create a client
@@ -1160,7 +1160,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import domains_v1beta1
+                    from google.cloud import domains_v1beta1
 
             def sample_list_registrations():
                 # Create a client
@@ -1268,7 +1268,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import domains_v1beta1
+                    from google.cloud import domains_v1beta1
 
             def sample_get_registration():
                 # Create a client
@@ -1393,7 +1393,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import domains_v1beta1
+                    from google.cloud import domains_v1beta1
 
             def sample_update_registration():
                 # Create a client
@@ -1534,7 +1534,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import domains_v1beta1
+                    from google.cloud import domains_v1beta1
 
             def sample_configure_management_settings():
                 # Create a client
@@ -1688,7 +1688,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import domains_v1beta1
+                    from google.cloud import domains_v1beta1
 
             def sample_configure_dns_settings():
                 # Create a client
@@ -1849,7 +1849,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import domains_v1beta1
+                    from google.cloud import domains_v1beta1
 
             def sample_configure_contact_settings():
                 # Create a client
@@ -2011,7 +2011,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import domains_v1beta1
+                    from google.cloud import domains_v1beta1
 
             def sample_export_registration():
                 # Create a client
@@ -2162,7 +2162,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import domains_v1beta1
+                    from google.cloud import domains_v1beta1
 
             def sample_delete_registration():
                 # Create a client
@@ -2287,7 +2287,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import domains_v1beta1
+                    from google.cloud import domains_v1beta1
 
             def sample_retrieve_authorization_code():
                 # Create a client
@@ -2390,7 +2390,7 @@ class DomainsClient(metaclass=DomainsClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import domains_v1beta1
+                    from google.cloud import domains_v1beta1
 
             def sample_reset_authorization_code():
                 # Create a client

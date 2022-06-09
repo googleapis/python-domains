@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.3](https://github.com/googleapis/python-domains/compare/v0.4.2...v0.4.3) (2022-06-07)
+
+
+### Bug Fixes
+
+* **deps:** require protobuf<4.0.0 on v0 branch ([#148](https://github.com/googleapis/python-domains/issues/148)) ([02e873c](https://github.com/googleapis/python-domains/commit/02e873cbe10c7fd76e96e7129a145e32f05457d9))
+
 ### [0.4.2](https://github.com/googleapis/python-domains/compare/v0.4.1...v0.4.2) (2022-04-01)
 
 

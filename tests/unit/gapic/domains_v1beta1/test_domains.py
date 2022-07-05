@@ -4875,7 +4875,6 @@ def test_domains_transport_auth_adc(transport_class):
     [
         transports.DomainsGrpcTransport,
         transports.DomainsGrpcAsyncIOTransport,
-        transports.DomainsRestTransport,
     ],
 )
 def test_domains_transport_auth_gdch_credentials(transport_class):

@@ -3,7 +3,7 @@ Python Client for Cloud Domains API
 
 |stable| |pypi| |versions|
 
-`Cloud Domains API`_: 
+`Cloud Domains API`_: allows you to register and manage domains by using Cloud Domains.
 
 - `Client Library Documentation`_
 - `Product Documentation`_
